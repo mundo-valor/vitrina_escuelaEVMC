@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela de Valuación Miguel Camacaro [EVMC] | Libros & Cursos Académicos</title>
+  <meta name="description" content="Portal informativo y académico de la Escuela de Valuación Miguel Camacaro [EVMC], Miguel Camacaro Ediciones y Mundo Valor. Formación especializada y publicaciones de tasación.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #070c18;
+      --bg-card: #0f172a;
+      --border-card: rgba(255, 255, 255, 0.12);
+      --royal-blue: #0070ba;
+      --accent-red: #991b1b;
+      --accent-red-hover: #b91c1c;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-title: 'Cinzel', serif;
+      --font-reading: 'Literata', Georgia, serif;
+      --font-ui: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: linear-gradient(rgba(7, 12, 24, 0.90), rgba(7, 12, 24, 0.95)), url('image_2360ec.png');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      line-height: 1.6;
+      overflow-x: hidden;
+      text-align: justify;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background: rgba(7, 12, 24, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-card);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 0;
+      text-align: left;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .brand-logo-left, .brand-logo-right {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-container {
+      background: #ffffff;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 2px solid var(--accent-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .logo-container img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-center a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-center a:hover {
+      color: #fca5a5;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-red {
+      background: linear-gradient(135deg, #7f1d1d, var(--accent-red));
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(153, 27, 27, 0.4);
+    }
+
+    .btn-red:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(185, 28, 28, 0.6);
+      background: linear-gradient(135deg, var(--accent-red), var(--accent-red-hover));
+    }
+
+    .btn-donate {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-donate:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid var(--border-card);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent-red);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0 4.5rem;
+      background: radial-gradient(circle at 50% 10%, rgba(23, 37, 84, 0.5) 0%, transparent 80%);
+      border-bottom: 1px solid var(--border-card);
+      text-align: left;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .badge-editorial {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(153, 27, 27, 0.15);
+      border: 1px solid rgba(153, 27, 27, 0.4);
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fca5a5;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+      color: #ffffff;
+    }
+
+    .hero-title span {
+      color: #f87171;
+    }
+
+    .hero-lead {
+      font-family: var(--font-reading);
+      font-size: 1.12rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Logo Showcase Card */
+    .hero-logo-card {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 35px rgba(153, 27, 27, 0.25);
+    }
+
+    .logo-badge-lg {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+    }
+
+    .logo-badge-lg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 50%;
+      border: none;
+    }
+
+    .hero-logo-card h3 {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-logo-card p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      text-align: center;
+      font-style: normal;
+      margin-top: 1rem;
+    }
+
+    /* Author Section */
+    .author-section {
+      padding: 4.5rem 0;
+      background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.6) 0%, transparent 85%);
+      border-bottom: 1px solid var(--border-card);
+      text-align: left;
+    }
+
+    .author-card-centered {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 35px rgba(153, 27, 27, 0.15);
+    }
+
+    .author-photo-xl {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-red);
+      padding: 5px;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+      background: #070c18;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .author-photo-xl img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .author-card-centered h3 {
+      font-family: var(--font-title);
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .author-card-centered .subtitle {
+      color: #60a5fa;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .author-quote {
+      font-family: var(--font-reading);
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-style: italic;
+      text-align: justify;
+    }
+
+    .author-socials-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-card);
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .social-icon-btn:hover {
+      background: rgba(153, 27, 27, 0.2);
+      border-color: var(--accent-red);
+      color: #fca5a5;
+      transform: translateY(-2px);
+    }
+
+    .social-icon-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Content Sections */
+    .section-block {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--border-card);
+      text-align: left;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+
+    /* Catalog Grid */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .catalog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-red);
+      box-shadow: 0 10px 25px -5px rgba(153, 27, 27, 0.25);
+    }
+
+    .item-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(153, 27, 27, 0.2);
+      color: #fca5a5;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(153, 27, 27, 0.4);
+    }
+
+    .catalog-card h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+      padding-right: 4.5rem;
+    }
+
+    .catalog-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.2rem;
+    }
+
+    .card-actions {
+      display: flex;
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-card);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      background: rgba(7, 12, 24, 0.95);
+    }
+
+    @media (max-width: 950px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .nav-center { display: none; }
+      body { text-align: left; }
+    }
+  
+    .card-thumbnail {
+      width: 100%;
+      height: 320px;
+      background: #1e293b;
+      border-radius: 10px;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #0b1329;
+    }
+
+    .carrusel-section {
+      background-image: linear-gradient(rgba(7, 12, 24, 0.88), rgba(7, 12, 24, 0.92)), url('Carrusel.jpg');
+      background-size: cover;
+      background-position: center;
+      border-top: 1px solid var(--border-card);
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .carrusel-showcase-card {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.90), rgba(30, 41, 59, 0.95));
+      border: 1px solid rgba(0, 112, 186, 0.4);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.8), 0 0 30px rgba(0, 112, 186, 0.2);
+    }
+
+    .carrusel-showcase-card h3 {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .carrusel-showcase-card p {
+      font-family: var(--font-reading);
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Modal Informativo CSS */
+    .viewer-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(4, 8, 17, 0.95);
+      backdrop-filter: blur(15px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .viewer-modal.show {
+      opacity: 1;
+    }
+
+    .info-content {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 650px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 40px rgba(153, 27, 27, 0.2);
+      overflow: hidden;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .viewer-modal.show .info-content {
+      transform: translateY(0);
+    }
+
+    .viewer-header {
+      padding: 1.5rem 2rem;
+      background: rgba(15, 23, 42, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .viewer-title {
+      font-family: var(--font-title);
+      font-size: 1.3rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .viewer-close {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .viewer-close:hover {
+      background: var(--accent-red);
+      border-color: var(--accent-red);
+      transform: rotate(90deg);
+    }
+
+    .info-body {
+      padding: 2.5rem 3rem 3.5rem;
+      text-align: center;
+    }
+
+    .info-body h3 {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .info-body p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand-logo-left" title="Miguel Camacaro Ediciones">
+        <div class="logo-container">
+          <img src="LogoMCE.png" alt="Miguel Camacaro Ediciones" onerror="this.style.display='none'">
+        </div>
+      </a>
+
+      <nav class="nav-center">
+        <a href="#congresos">Congresos</a>
+        <a href="#cursos">Cursos Online</a>
+        <a href="#multimedia">Videos - Podcast</a>
+        <a href="#libros">Libros</a>
+        <a href="#aprendizaje">Aprendizaje Guiado</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="https://paypal.me/spilimcurso" target="_blank" rel="noopener noreferrer" class="btn btn-donate">☕ Aportar / Donar</a>
+      </nav>
+
+      <a href="#" class="brand-logo-right" title="Mundo Valor">
+        <div class="logo-container">
+          <img src="Mundovalor.png" alt="Mundo Valor" onerror="this.style.display='none'">
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge-editorial">Escuela de Valuación Miguel Camacaro [EVMC]</span>
+          <h1 class="hero-title">Investigación y <span>Formación Académica Avanzada</span></h1>
+          <p class="hero-lead">
+            Portal informativo oficial del Prof. Ing. Miguel Camacaro Pérez, M.Sc. Acceso directo al catálogo general de publicaciones especializadas y programas de formación en valuación.
+          </p>
+          <div class="hero-btns">
+            <a href="#libros" class="btn btn-red">Explorar Catálogo General</a>
+            <a href="https://paypal.me/spilimcurso" target="_blank" rel="noopener noreferrer" class="btn btn-donate">☕ Aportar al Proyecto</a>
+          </div>
+        </div>
+
+        <div class="hero-logo-card">
+          <div class="logo-badge-lg">
+            <img src="LOGO EVMC.jpg" alt="Logotipo Escuela de Valuación Miguel Camacaro" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+          </div>
+          <p>El esfuerzo de uno, crecimiento de todos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Author Section -->
+    <section class="author-section" id="profesor">
+      <div class="container">
+        <div class="author-card-centered">
+          <div class="author-photo-xl">
+            <img src="Informal%203.png" alt="Prof. Ing. Miguel Camacaro Pérez, M.Sc." onerror="this.style.display='none'">
+          </div>
+          <h3>Prof. Ing. Miguel Camacaro Pérez, M.Sc.</h3>
+          <div class="subtitle">Ingeniero Civil - Tasador • Especialista en Ingeniería Legal y de Valuación</div>
+          <p class="author-quote">
+            «El profesor Miguel Camacaro Pérez es un apasionado de la Ciencia de la valuación, de la Ciencia de datos y de la Inteligencia Artificial Generativa. Con más de 40 años de experiencia se ha comprometido en impulsar el crecimiento profesional de los valuadores a través de la integración de las últimas herramientas y tecnologías en su flujo de trabajo».
+          </p>
+          
+          <div class="author-socials-icons">
+            <a href="mailto:cursoediciones@gmail.com" class="social-icon-btn" title="Enviar correo a cursoediciones@gmail.com">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-8V6l8 5 8-8v2z"/></svg>
+              Gmail
+            </a>
+            <a href="https://linkedin.com/in/miguel-alberto-camacaro-pérez-4634b2118" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Perfil de LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.youtube.com/@MundoValor" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Canal de YouTube Mundo Valor">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Participación en Congresos - Artículos Científicos Section -->
+    <section class="section-block" id="congresos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Participación en Congresos & Artículos Científicos</h2>
+        </div>
+
+        <div class="catalog-grid">
+          
+          <div class="catalog-card" style="border-color: rgba(153, 27, 27, 0.4);">
+            <span class="item-badge" style="background: rgba(153, 27, 27, 0.2); color: #fca5a5; border-color: rgba(153, 27, 27, 0.4);">Nuevo / Congreso 2026</span>
+            <div class="card-thumbnail">
+              <img src="CEAD 2026.jpg" alt="CEAD 2026" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Conferencias Magistrales CEAD 2026</h3>
+              <p>Participación oficial en Brasil (Recife). Inteligencia Artificial aplicada a la inspección y Auditoría Forense en la valuación.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-red" style="width:100%;">🚀 Visitar Portal del Evento</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Congreso 2022</span>
+            <div class="card-thumbnail">
+              <img src="MCamacaroEMockLares 2022.jpg" alt="LARES 2022" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Ponencia & Artículo LARES 2022</h3>
+              <p>Participación y divulgación de investigación en el congreso de la Latin American Real Estate Society.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Artículo / Ponencia</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Congreso 2022</span>
+            <div class="card-thumbnail">
+              <img src="ID10ISAHP2022.jpg" alt="ISAHP 2022" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Ponencia & Artículo ISAHP 2022</h3>
+              <p>Investigación presentada en el International Symposium on the Analytic Hierarchy Process.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Artículo / Ponencia</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Congreso 2024</span>
+            <div class="card-thumbnail">
+              <img src="MCamacaroLares2024.jpg" alt="LARES 2024" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Ponencia & Artículo LARES 2024</h3>
+              <p>Contribución científica y exposición de modelos aplicados en el encuentro anual de LARES.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Artículo / Ponencia</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Congreso 2024</span>
+            <div class="card-thumbnail">
+              <img src="AvataresEnglishMCamacaroISAHP2024.jpg" alt="ISAHP 2024" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Ponencia & Artículo ISAHP 2024</h3>
+              <p>Estudio especializado expuesto en el foro internacional de toma de decisiones multicriterio.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Artículo / Ponencia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cursos Online Section -->
+    <section class="section-block" id="cursos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cursos Online Especializados</h2>
+        </div>
+
+        <div class="catalog-grid">
+
+          <div class="catalog-card" style="border-color: rgba(153, 27, 27, 0.4);">
+            <span class="item-badge" style="background: rgba(153, 27, 27, 0.2); color: #fca5a5; border-color: rgba(153, 27, 27, 0.4);">Nuevo / Especializado</span>
+            <div class="card-thumbnail">
+              <img src="CursoIEAI.jpg" alt="Interpretaciones estadísticas en los avalúos inmobiliarios" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Interpretaciones estadísticas en los avalúos inmobiliarios</h3>
+              <p>Aprende a aplicar la metodología científica y la econometría (Modelos de Regresión Lineal) para la estimación de valores inmobiliarios, fundamentado en las normas IVS 2025 y ABNT NBR 14653.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-red" style="width:100%;">🚀 Visitar Curso Online</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="catalog-card">
+            <span class="item-badge">Especializado</span>
+            <div class="card-thumbnail">
+              <img src="Contributivo.jpg" alt="El Método Contributivo en los Avalúos Inmobiliarios" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>El Método Contributivo en los Avalúos Inmobiliarios</h3>
+              <p>Domina la desagregación de valores y la determinación de los factores de comercialización y contribución de la tierra aplicando rigor estadístico.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Curso Online</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Especializado</span>
+            <div class="card-thumbnail">
+              <img src="Foto-Portada.jpg" alt="Valuación Aumentada con NotebookLM" onerror="this.onerror=null; this.src='LogoMCE.png';">
+            </div>
+            <div>
+              <h3>Valuación Aumentada con NotebookLM</h3>
+              <p>Curso internacional enfocado en potenciar la valuación inmobiliaria y de activos mediante la integración de la IA de Gemini NotebookLM y gestión experta de fuentes RAG.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Curso Online</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="catalog-card">
+            <span class="item-badge">Especializado</span>
+            <div class="card-thumbnail">
+              <img src="curso_ia_valuadores.png" alt="Inteligencia Artificial Generativa para Valuadores" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Inteligencia Artificial Generativa para Valuadores</h3>
+              <p>Programa especializado para dominar modelos de lenguaje, automatización de informes y análisis de mercado con IA.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Curso Online</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Curso Online</span>
+            <div class="card-thumbnail">
+              <img src="2GMaquinaria_Heideck.2026.jpg" alt="Valuación de Máquinas y Equipos Industriales (Criterio Heideck)" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Valuación de Máquinas y Equipos Industriales (Criterio Heideck)</h3>
+              <p>Módulo histórico, análisis de tablas originales y aplicación del procedimiento de Erich Heideck con IA generativa.</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Curso</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Curso Online</span>
+            <div class="card-thumbnail">
+              <img src="28082026 Curso Online.jpg" alt="Valuación de Máquinas y Equipos Industriales (Criterio Heideck D0941)" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+            </div>
+            <div>
+              <h3>Valuación de Máquinas y Equipos Industriales (Criterio Heideck-D0941)</h3>
+              <p>Interpretación avanzada integrando el nuevo marco normativo del Anexo Técnico del IGAC (Resolución 0941.2026).</p>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions" style="width:100%;">
+                <button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Curso</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN REUBICADA: Videos - Podcast - Audios -->
+    <section class="section-block carrusel-section" id="multimedia">
+      <div class="container">
+        <div class="section-head">
+          <h2>VIDEOS - PODCAST - AUDIOS</h2>
+        </div>
+
+        <div class="carrusel-showcase-card">
+          <h3>EL CARRUSEL DEL VALOR</h3>
+          <p>
+            Herramienta interactiva avanzada para buscar, filtrar, armar listas de reproducción personalizadas y disfrutar de todo el contenido educativo en video y audio generado por el Prof. Ing. Miguel Camacaro Pérez.
+          </p>
+          <button onclick="openInfoModal()" class="btn btn-red" style="padding: 0.8rem 2rem; font-size: 1rem;">
+            ▶ Acceder a El Carrusel del Valor
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Libros Section -->
+    <section class="section-block" id="libros">
+      <div class="container">
+        <div class="section-head">
+          <h2>Catálogo de Libros & E-books</h2>
+        </div>
+
+        <div class="catalog-grid">
+          
+          <!-- Los 12 libros de tu archivo original -->
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="El Fabuloso.jpg" alt="El fabuloso avalúo de un castillo medieval" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>El fabuloso avalúo de un castillo medieval</h3><p>Metodología didáctica y singular aplicada a la valoración de bienes históricos y patrimoniales complejos.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="Casos y Cosas.jpg" alt="Casos y cosas de la valuación" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>Casos y cosas de la valuación</h3><p>Ensayos, anécdotas y resolución de casos prácticos en el ejercicio profesional de la ingeniería de tasación.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="Valuacion de terrenos.png" alt="Valuación de terrenos industriales, fábricas, edificios comerciales y residenciales" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>Valuación de terrenos industriales, fábricas, edificios comerciales y residenciales</h3><p>Traducción y adaptación del referente clásico de Erich Heideck para la tasación de activos complejos.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="Una valuacion.png" alt="Una valuación industrial" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>Una valuación industrial</h3><p>Estudio de caso aplicado al análisis y desglose técnico de componentes en instalaciones fabriles.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="ebook español.png" alt="El e-book de un avalúo inmobiliario" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>El e-book de un avalúo inmobiliario</h3><p>Guía práctica y metodológica para la estandarización de informes y criterios de mercado inmobiliario.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="ebook ingles.png" alt="The e-book of the Real Estate Appraisal" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>The e-book of the Real Estate Appraisal</h3><p>Official English version covering international standards, valuation approaches and reporting.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="ebook portugues.png" alt="O e-book de uma avaliação imobiliária" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>O e-book de uma avaliação imobiliária</h3><p>Versão oficial em português com foco nas normas ABNT y modelagem estatística aplicada.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="ebook italiano.png" alt="L’ebook di uma valutazione immobiliare" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>L’ebook di uma valutazione immobiliare</h3><p>Edizione in lingua italiana focalizzata sui criteri di stima e standard internazionali di valutazione.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="Contributivo.png" alt="El método contributivo en los avalúos inmobiliarios" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>El método contributivo en los avalúos inmobiliarios</h3><p>Desarrollo exhaustivo del Modelo Mandelblatt-Camacaro y simulación de Monte Carlo en ausencia de datos.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+          
+          <div class="catalog-card">
+            <span class="item-badge">E-book</span>
+            <div class="card-thumbnail"><img src="Cuarderno tasacion_2.png" alt="Un Cuaderno de Tasación" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';"></div>
+            <div><h3>Un Cuaderno de Tasación</h3><p>Notas técnicas, apuntes metodológicos y ejercicios prácticos esenciales para la labor diaria del tasador profesional.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Tratado</span>
+            <div class="card-thumbnail"><img src="Imagen2.jpg" alt="Ingeniería de Tasaciones - Rubens Alves Dantas" onerror="this.onerror=null; this.src='Imagen2_4.jpg';"></div>
+            <div><h3>Ingeniería de Tasaciones: Una introducción a la metodología científica</h3><p>Tratado fundamental del Dr. Rubens Alves Dantas, traducido por el Ing. Miguel Camacaro Pérez. Inferencia estadística y modelos de regresión.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+          <div class="catalog-card">
+            <span class="item-badge">Tratado</span>
+            <div class="card-thumbnail"><img src="Abunahman.jpg" alt="Curso Básico de Ingeniería Legal y de Tasaciones - Sérgio Antonio Abunahman" onerror="this.onerror=null; this.src='Abunahman_2.jpg';"></div>
+            <div><h3>Curso Básico de Ingeniería Legal y de Tasaciones</h3><p>Obra clásica del Ing. Sérgio Antonio Abunahman, traducida por el Ing. Miguel Camacaro Pérez. Criterios de arbitraje, peritajes judiciales y tasaciones especiales.</p></div>
+            <div class="card-footer"><button onclick="openInfoModal()" class="btn btn-outline" style="width:100%;">Ver Detalle</button></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Aprendizaje Guiado Section -->
+    <section class="section-block" id="aprendizaje">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cuadernos de Aprendizaje Guiado</h2>
+        </div>
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Generado dinámicamente por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Herramientas de Aplicación Section -->
+    <section class="section-block" id="herramientas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Herramientas de Aplicación & Simuladores</h2>
+        </div>
+        <div class="catalog-grid" id="herramientasGrid">
+          <!-- Generado dinámicamente por JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Escuela de Valuación Miguel Camacaro [EVMC]</strong> — © 2026 Miguel Camacaro Ediciones & Mundo Valor</p>
+      <p style="margin-top:0.4rem; opacity:0.7;">Portal informativo y académico unificado para la difusión de la ciencia de la valuación.</p>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL INFORMATIVO ================= -->
+  <div class="viewer-modal" id="infoModal">
+    <div class="info-content">
+      <div class="viewer-header">
+        <div class="viewer-title">
+          <svg style="width:24px;height:24px;fill:#60a5fa;" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2c0-1.11-.89-2-2-2a2 2 0 0 0-2 2c0 1.11.89 2 2 2m6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2m-6-5c1.66 0 3 1.34 3 3v2H9V6c0-1.66 1.34-3 3-3"/></svg>
+          Catálogo Informativo EVMC
+        </div>
+        <button class="viewer-close" onclick="closeInfoModal()">✕</button>
+      </div>
+      <div class="info-body">
+        <h3>Portal de Investigación y Formación</h3>
+        <p>
+          Estás explorando el catálogo unificado de la <strong>Escuela de Valuación Miguel Camacaro</strong>. Este ecosistema digital ha sido diseñado para elevar el nivel técnico de los profesionales de la valuación.
+        </p>
+        <p>
+          Nuestro proyecto es 100% independiente. Para obtener acceso completo a los cursos, libros, herramientas y simuladores, te invitamos a sumarte a nuestra iniciativa de cofinanciación tecnológica y científica.
+        </p>
+        <a href="https://paypal.me/spilimcurso" target="_blank" class="btn btn-donate" style="padding: 1.2rem 2rem; font-size: 1.1rem; width: 100%; box-shadow: 0 10px 25px rgba(37,99,235,0.5); margin-top: 1rem;">
+          ☕ Aportar al Proyecto y Solicitar Acceso
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---- Funciones del Modal Informativo ----
+    function openInfoModal() {
+      const modal = document.getElementById('infoModal');
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('show'), 10);
+    }
+
+    function closeInfoModal() {
+      const modal = document.getElementById('infoModal');
+      modal.classList.remove('show');
+      setTimeout(() => modal.style.display = 'none', 300);
+    }
+
+    // LISTA COMPLETA DE HERRAMIENTAS ORIGINAL
+    const herramientasData = [
+      { id: 1, title: "Simulador de maquinaria - Heideck", cover: "1. Herramienta.jpg", desc: "Simulador interactivo del procedimiento propuesto por Erich Heideck para estimar el valor actual de maquinaria e instalaciones." },
+      { id: 2, title: "Valor de maquinaria y equipos (Decreto 0941.2026)", cover: "2. Herramienta.jpg", desc: "Informe técnico de cálculo según el Anexo Técnico del IGAC (Resolución 0941 de 2026)." },
+      { id: 3, title: "Estimador de valores actuales", cover: "3. Herramienta.jpg", desc: "Herramienta de estimación de valores actuales para construcciones y maquinaria y equipo." },
+      { id: 4, title: "Modelado y comparativa de métodos de valuación", cover: "4. Herramienta.jpg", desc: "Plataforma interactiva para la determinación del valor actual aplicando simultáneamente 12 metodologías normativas." },
+      { id: 5, title: "Plataforma de valuación industrial de máquinas y equipos", cover: "5. Herramienta.jpg", desc: "Modelo de tasación con nacionalización, métodos de depreciación y dictamen pericial completo." },
+      { id: 6, title: "Módulo especial: Auténtico Criterio Heideck", cover: "6. Herramienta.jpg", desc: "Valuación analítica de maquinaria considerando vida útil, esfuerzo operativo y corrección por jornada." },
+      { id: 7, title: "Plataforma de valuación industrial (+ Heidecke)", cover: "7. Herramienta.jpg", desc: "Solución integral de valuación industrial incorporando métodos estadísticos y factores de ajuste normativos." },
+      { id: 8, title: "Test de rigor Científico y Normativo", cover: "8. Herramienta.jpg", desc: "Evaluación diagnóstica sobre las inconsistencias y precisiones matemáticas en la Depreciación Ross-Heideck." },
+      { id: 9, title: "Valor del inmueble según el Decreto 0941.2026", cover: "9. Herramienta.jpg", desc: "Valuación inmobiliaria integral: Método del Costo (Terreno + Construcción con Depreciación Ross-Heideck)." },
+      { id: 10, title: "Valor de maquinaria y equipos (Alt)", cover: "10. Herramienta.jpg", desc: "Solución alternativa de cálculo según el Anexo Técnico del IGAC (Resolución 0941 de 2026)." },
+      { id: 12, title: "Método de la renta", cover: "11. Herramienta.jpg", desc: "Aplicación del método de capitalización de rentas conforme a las normativas vigentes." },
+      { id: 13, title: "Aplicando el método Ross-Heideck", cover: "12. Herramienta.jpg", desc: "Cuestionario y explicativo detallado del procedimiento original de Ross-Heideck." },
+      { id: 14, title: "Auditoría Metodología Ross-Heideck", cover: "13. Herramienta.jpg", desc: "Herramienta de revisión y auditoría técnica para cálculos basados en la metodología Ross-Heideck." },
+      { id: 15, title: "Aplicación del método contributivo", cover: "14. Herramienta.jpg", desc: "Simulador práctico para el desglose y aplicación del método contributivo en inmuebles." },
+      { id: 16, title: "Aplicación del método evolutivo", cover: "15. Herramienta.jpg", desc: "Plataforma de cálculo y estimación utilizando el método evolutivo para tasación inmobiliaria." },
+      { id: 17, title: "Método Participativo", cover: "16. Herramienta.jpg", desc: "Herramienta especializada para la valuación de predios rurales bajo el enfoque participativo." },
+      { id: 18, title: "Atipicómetro inmobiliario", cover: "17. Herramienta.jpg", desc: "Calculadora estadística para la detección y corrección de valores atípicos en muestras de mercado." },
+      { id: 19, title: "Módulo de Estadística Inferencial", cover: "18. Herramienta.jpg", desc: "Aplicación de ciencia de datos y estadística inferencial para análisis valuatorios avanzados." },
+      { id: 20, title: "Simulador Monte Carlo - Mandelblatt-Camacaro", cover: "Montecarlo.jpg", desc: "Enfoque probabilístico del Método Contributivo mediante Simulaciones de Monte Carlo, intervalos de confianza y análisis de sensibilidad." },
+      { id: 21, title: "Factores de Contribución y Comercialización", cover: "19. Herramienta.jpg", desc: "Plataforma interactiva para el cálculo y análisis de los factores de contribución y comercialización en la valuación." },
+      { id: 22, title: "Posesionómetro 2026", cover: "20. HHerramienta.jpg", desc: "Herramienta interactiva para determinar el valor de posesión mediante metodologías de ponderación legal y características de la ocupación." }
+    ];
+
+    function renderHerramientas() {
+      const grid = document.getElementById('herramientasGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      
+      herramientasData.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'catalog-card';
+        card.style.borderColor = "rgba(0, 112, 186, 0.3)";
+        card.innerHTML = `
+          <span class="item-badge" style="background: rgba(0, 112, 186, 0.2); color: #60a5fa; border-color: rgba(0, 112, 186, 0.4);">Herramienta</span>
+          <div class="card-thumbnail">
+            <img src="${item.cover}" alt="Herramienta ${item.id}" onerror="this.onerror=null; this.src='LOGO EVMC.jpg';">
+          </div>
+          <h3>${item.title}</h3>
+          <p>${item.desc}</p>
+          <div class="card-footer" style="margin-top:auto;">
+            <button onclick="openInfoModal()" class="btn btn-red" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; width:100%; justify-content:center; background: linear-gradient(135deg, #1d4ed8, #2563eb); box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);">Abrir Herramienta ➔</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // LISTA COMPLETA DE CUADERNOS ORIGINAL
+    const items = [
+      { id: 1, title: "1. Aprendizaje Guiado", cover: "1. Aprendizaje Guiado Portada.png" },
+      { id: 2, title: "2. Aprendizaje Guiado", cover: "2. Aprendizaje Guiado Portada.png" },
+      { id: 3, title: "3. Aprendizaje Guiado", cover: "3. Aprendizaje Guiado Portada - copia.png" },
+      { id: 4, title: "4. Aprendizaje Guiado", cover: "4. Aprendizaje Guiado Portada.png" },
+      { id: 5, title: "5. Aprendizaje Guiado", cover: "5. Aprendizaje Guiado Portada.png" },
+      { id: 6, title: "6. Aprendizaje Guiado", cover: "6. Aprendizaje Guiado Portada.png" },
+      { id: 7, title: "7. Aprendizaje Guiado", cover: "7 Aprendizaje Guiado Portada.png" },
+      { id: 8, title: "8. Aprendizaje Guiado", cover: "8. Aprendizaje Guiado Portada.png" },
+      { id: 9, title: "9. Aprendizaje Guiado", cover: "9. Aprendizaje Guiado Portada.png" },
+      { id: 10, title: "10. Aprendizaje Guiado", cover: "10. Aprendizaje Guiado Portada.png" },
+      { id: 11, title: "11. Aprendizagem Guiada", cover: "11. Aprendizagem Guiada Portada.png" },
+      { id: 12, title: "12. Aprendizaje Guiado", cover: "12. Aprendizaje Guiado Portada.png" },
+      { id: 13, title: "13. Aprendizaje Guiado", cover: "13. Aprendizaje Guiado Portada.png" },
+      { id: 14, title: "14. Aprendizaje Guiado", cover: "14. Aprendizaje Guiado Portada.png" },
+      { id: 15, title: "15. Aprendizagem Guiada", cover: "15. Aprendizagem Guiada Portada.png" },
+      { id: 16, title: "16. Aprendizaje Guiado", cover: "16. Aprendizaje Guiado Portada.png" },
+      { id: 17, title: "17. Aprendizaje Guiado", cover: "17. Aprendizaje Guiado Portada.png" },
+      { id: 18, title: "18. Aprendizaje Guiado", cover: "18. Aprendizaje Guiado Portada.png" },
+      { id: 19, title: "19. Aprendizaje Guiado", cover: "19. Aprendizaje Guiado Portada.png" },
+      { id: 20, title: "20. Aprendizaje Guiado", cover: "20. Aprendizaje Guiado Portada.png" },
+      { id: 21, title: "21. Aprendizaje Guiado", cover: "21. Aprendizaje Guiado Portada.png" },
+      { id: 22, title: "22. Aprendizaje Guiado", cover: "22. Aprendizaje Guiado Portada.png" },
+      { id: 23, title: "23. Aprendizaje Guiado", cover: "23. Aprendizaje Guiado Portada.png" },
+      { id: 24, title: "24. Aprendizaje Guiado", cover: "24. Aprendizaje Guiado Portada.png" },
+      { id: 25, title: "25. Aprendizaje Guiado", cover: "25. Aprendizaje Guiado Portada.png" }
+    ];
+
+    function renderCatalog() {
+      const grid = document.getElementById('catalogGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'catalog-card';
+        card.innerHTML = `
+          <span class="item-badge">Vol. ${item.id}</span>
+          <div class="card-thumbnail">
+            <img src="${item.cover}" alt="Portada ${item.title}" onerror="this.onerror=null; this.src='7 Aprendizaje Guiado Portada.png';">
+          </div>
+          <h3>${item.title}</h3>
+          <div class="card-footer">
+            <button class="btn btn-red" onclick="openInfoModal()" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; width:100%; justify-content:center;">📖 Leer en Visor</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    window.onload = () => {
+      renderHerramientas();
+      renderCatalog();
+    };
+  </script>
+</body>
+</html>
